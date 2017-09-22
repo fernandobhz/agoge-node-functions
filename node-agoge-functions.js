@@ -41,3 +41,8 @@ exports.mergeRecursive(obj1, obj2) {
 
   return obj1;
 }
+
+function classe(o) {
+	return Object.prototype.toString.call(o);
+}
+
