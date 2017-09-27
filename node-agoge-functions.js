@@ -16,10 +16,7 @@ exports.sleep = function(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-/*
-* Recursively merge properties of two objects 
-*/
-exports.mergeRecursive(obj1, obj2) {
+exports.mergeRecursive = function(obj1, obj2) {
 
   for (var p in obj2) {
     try {
@@ -41,6 +38,8 @@ exports.mergeRecursive(obj1, obj2) {
 
   return obj1;
 }
+
+
 
 function classe(o) {
 	return Object.prototype.toString.call(o);
